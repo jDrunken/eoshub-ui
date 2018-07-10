@@ -104,7 +104,6 @@ gulp.task('connect', function() {
 // 파일 변경 감지 :: local
 gulp.task('watch', function(callback) {
     livereload.listen();
-    gulp.watch(path.source.js+'/*.js',['copy:js'],callback);
     gulp.watch(path.source.style+'/*.{scss,sass,css}',['convert:sass:sourcemap'],callback);
 
     // index 재생성
@@ -177,7 +176,9 @@ gulp.task('copy:conf',function () {
 // pipe running
 // --------------------------------------------------------------------------------
 
-gulp.task('default', ['help']);
+// gulp.task('default', ['help']);
+// 여기서 running task는 gulp밖에 없으니깐..
+gulp.task('default', ['local']);
 
 gulp.task('local', function () {
     runSequence('clean','make:index.html',['copy:image','copy:conf'],'convert:sass:sourcemap', 'html',['connect','watch']);

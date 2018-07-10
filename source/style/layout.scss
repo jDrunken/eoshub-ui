@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+$lnb_width:400px;
+
+body {
+    background-color:#f5f6fb;
+}
+
+main {
+    position:relative;
+    max-width:1520px;
+    margin:0 auto;
+
+    div.sidebar {
+        position:absolute;
+        top:0;
+        bottom:0;
+        width:$lnb_width;
+    }
+
+    div.sidebar + div.wrapper {
+        margin-left:$lnb_width;
+        min-height:980px;
+    }
+}
