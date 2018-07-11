@@ -10,8 +10,15 @@
 // reset
 @import 'base.scss';
 
+// element
+@import 'button.scss';
+
 // layout
 @import 'layout.scss';
 
 // sidebar
 @import 'sidebar.scss';
+
+// details
+@import 'main.scss';
+@import 'action-view-container.scss';

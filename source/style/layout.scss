@@ -1,6 +1,8 @@
 @charset 'UTF-8';
 
 $lnb_width:400px;
+$whole_width_min:1060px;
+$whole_width_max:1280px;
 
 body {
     background-color:#f5f6fb;
@@ -8,18 +10,34 @@ body {
 
 main {
     position:relative;
-    max-width:1520px;
     margin:0 auto;
+
+    height:inherit;
+
+    box-sizing:border-box;
+    padding:40px;
 
     div.sidebar {
         position:absolute;
         top:0;
         bottom:0;
+        left:0;
         width:$lnb_width;
+        box-sizing:border-box;
+
+        display:flex;
+        flex-flow:column;
+        height:100%;
+        justify-content:space-between;
     }
 
     div.sidebar + div.wrapper {
+        position:relative;
+        min-width:$whole_width_min;
         margin-left:$lnb_width;
-        min-height:980px;
+
+        box-sizing:border-box;
     }
 }
+
+// full view

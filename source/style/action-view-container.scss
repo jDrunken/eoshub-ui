@@ -1,0 +1,28 @@
+@charset 'UTF-8';
+
+.action.view.container {
+
+    overflow:hidden;
+
+    .card {
+        background-color:#fff;
+        box-sizing:border-box;
+        padding:32px;
+        width:464px;
+        height:300px;
+        margin:0 8px 8px 0;
+        float:left;
+
+        a {
+            color:#999;
+        }
+
+        h3 {
+            font-weight:300;
+            font-size:rem(20);
+            color:#333;
+        }
+
+
+    }
+}

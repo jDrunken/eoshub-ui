@@ -5,31 +5,89 @@ $padding_left_right:40px;
 $padding_bottom:36px;
 
 .sidebar {
+    background-color:#fff;
+    padding:$padding_top $padding_left_right $padding_bottom;
+}
 
-    padding:$padding_top $padding_left_right 0;
+.sidebar header {
+    h1 {
+        @include ir();
+        width:91px;
+        height:20px;
+        
+        background:#f00;
+    }
 
-    header {
-        h1 {
-            width:91px;
-            height:20px;
-        }
+    h1 + button {
+        position:absolute;
+        top:$padding_top;
+        right:$padding_left_right;
 
-        h1 + button {
-            position:absolute;
-            top:$padding_top;
-            right:$padding_left_right;
+        @include ir();
+        width:20px;
+        height:20px;
+    }
+}
 
-            @include ir();
-            width:20px;
-            height:20px;
+.sidebar .dashboard {
+    h2 {
+        color:#333;
+        font-weight:300;
+        line-height:1.4;
+    }
+    .panel {
+        color:#999;
+        font-size:rem(14);
+    }
+
+    // 버튼 :: 로그인, 신규계정생성
+    .btn_area {
+        a {
+            width:156px;
+            height:52px;
+            line-height:52px;
+            border-width:1px;
+            border-style:solid;
+            font-size:rem(14);
         }
     }
 
-    .dashboard {
-        display:flex;
-        flex-flow:column;
-        height:100%;
-
+    h2 + .panel {
+        margin-top:14px;
     }
 
+    h2 + .panel + .btn_area {
+        margin-top:40px;
+    }
+}
+
+// 각종 언어와 sns link 모음
+.sidebar  nav {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    a {
+        @include ir();
+        width:20px;
+        height:20px;
+
+        margin-right:8px;
+
+        background-color:#f00;
+    }
+
+    // 한영 전환 버튼
+    button {
+        font-size:rem(14);
+        margin-left:8px;
+        color:#000;
+    }
+
+    // 버튼들의 wrapper
+    div {
+        * {
+        vertical-align:middle;
+        }
+    }
 }
