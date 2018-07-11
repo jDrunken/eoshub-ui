@@ -4,18 +4,24 @@
 
     overflow:hidden;
 
-    .card {
-        background-color:#fff;
-        box-sizing:border-box;
-        padding:32px;
-        width:464px;
-        height:300px;
-        margin:0 8px 8px 0;
-        float:left;
+    display:grid;
+    max-width:1416px;
+    grid-template-columns:(100% / 3) (100% / 3) (100% / 3);
+    grid-template-rows:300px 300px;
 
-        a {
-            color:#999;
-        }
+    a {
+        display:block;
+        color:#999;
+        background-color:#fff;
+        margin:0 8px 8px 0;
+        padding:32px;
+        box-sizing:border-box;
+        max-width:464px;
+    }
+
+    .card {
+
+        height:auto;
 
         h3 {
             font-weight:300;
@@ -25,4 +31,5 @@
 
 
     }
+
 }
