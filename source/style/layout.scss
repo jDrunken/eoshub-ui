@@ -5,10 +5,10 @@ $whole_width_min:1060px;
 $whole_width_max:1280px;
 
 body {
-    background-color:#f5f6fb;
 }
 
 main {
+    background-color:#f5f6fb;
     position:relative;
     margin:0 auto;
 
@@ -40,4 +40,7 @@ main {
     }
 }
 
-// full view
+
+main.join {
+    background:transparent;
+}

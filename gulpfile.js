@@ -116,7 +116,7 @@ gulp.task('watch', function(callback) {
     ], ['html'],callback);
 
     // 이미지 수정처리
-    gulp.watch(path.source.root+'/**/*.{png,jpg,gif}', ['copy:image'],callback);
+    gulp.watch(path.source.image+'/*.{png,jpg,gif,svg}', ['copy:image'],callback);
 });
 
 // 빌드 전 청소
