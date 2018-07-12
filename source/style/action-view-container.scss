@@ -4,19 +4,26 @@
 
     overflow:hidden;
 
-    display:grid;
-    max-width:1416px;
-    grid-template-columns:(100% / 3) (100% / 3) (100% / 3);
-    grid-template-rows:300px 300px;
+    // display:grid;
+    // grid-template-columns:(100% / 3) (100% / 3) (100% / 3);
+    // grid-template-rows:300px 300px;
+
+    display:flex;
+    flex-flow:row wrap;
+    
+
+    margin-left:-8px;
+    margin-right:-8px;
 
     a {
+        flex:0 0 calc(100% / 3 - 16px);
         display:block;
         color:#999;
         background-color:#fff;
-        margin:0 8px 8px 0;
+        margin:8px;
         padding:32px;
         box-sizing:border-box;
-        max-width:464px;
+        height:300px;
     }
 
     .card {
