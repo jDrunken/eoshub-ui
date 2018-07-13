@@ -8,6 +8,14 @@ $padding_bottom:36px;
 .sidebar {
     background-color:#fff;
     padding:$padding_top $padding_left_right $padding_bottom;
+
+    display:flex;
+    flex-flow:column;
+    height:100%;
+    justify-content:space-between;
+
+    position:relative;
+
 }
 
 .sidebar .dashboard.hello_world,
