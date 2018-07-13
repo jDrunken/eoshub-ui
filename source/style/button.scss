@@ -1,9 +1,5 @@
 @charset 'UTF-8';
 
-
-@charset "UTF-8";
-/* button view element declaration by 신진훈
- */
 button[type='button'],
 a.button,
 input[type='submit'] {
@@ -34,13 +30,10 @@ input[type='submit'] {
 
 }
 
-// size 지정은 안하도록 한다. 개별 프로젝트마다 아직 공통으로 지정된 크기가 없음
-
-// color
+// colorset :: foreground_background
 button[type='button'],
 a.button,
 input[type='submit'] {
-    // 컬러셋 지정 :: 전경색_배경색
 
     &.blue_white {
         border-radius: 2px;
@@ -75,10 +68,9 @@ a.button {
     }
 }
 
-// image only
+// image icon only
 button[type='button'],
 a.button {
-    // 이미지만 표시하는 버튼들은 모두 Icon으로 표시한다.
     &.icon {
         text-indent:-999em;
         background-repeat:no-repeat;
@@ -88,7 +80,7 @@ a.button {
 }
 
 
-// 예외들
+// exception :: special case
 button[type='button'],
 a.button,
 input[type='submit'] {
@@ -98,7 +90,7 @@ input[type='submit'] {
 }
 
 // --------------------------------------------------------------------------------
-// 버튼영역에 대한 정의
+// declaration button wrapper element
 // --------------------------------------------------------------------------------
 
 .btn_area {

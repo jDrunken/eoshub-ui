@@ -20,7 +20,7 @@
 
     }
 
-    // 섹션 :: 검색
+    // section :: search field
     fieldset {
         position:relative;
         width:432px;
@@ -50,7 +50,7 @@
         line-height:$height;
     }
 
-    // 각종 시세
+    // price (ram...eos..)
     ul,li { 
         margin:0;
         padding:0;
@@ -79,7 +79,7 @@
             justify-content:space-between;
         }
 
-        // 시세 나옴
+        // price panel decorate
         span:before {
             font-size:rem(8);
         }

@@ -40,7 +40,7 @@ $padding_bottom:36px;
         font-size:rem(14);
     }
 
-    // 버튼 :: 로그인, 신규계정생성
+    // button :: login, join
     .btn_area {
         a {
             width:156px;
@@ -61,7 +61,7 @@ $padding_bottom:36px;
     }
 }
 
-// 각종 언어와 sns link 모음
+// locale, sns link
 .sidebar  nav {
     display:flex;
     justify-content:space-between;
@@ -77,7 +77,7 @@ $padding_bottom:36px;
         background-color:#f00;
     }
 
-    // 버튼들의 wrapper
+    // button wrapper
     div {
         * {
         vertical-align:middle;
@@ -86,7 +86,7 @@ $padding_bottom:36px;
 }
 
 
-// 한영 전환 버튼
+// button :: han-eng conversion
 button.lang {
     font-size:rem(14);
     margin-left:8px;
