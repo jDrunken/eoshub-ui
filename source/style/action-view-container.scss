@@ -1,48 +1,38 @@
 @charset 'UTF-8';
 
-main .wrapper {
-    .action.view.container {
+.action.view.container {
 
-        overflow:hidden;
+    overflow:hidden;
 
-        display:flex;
-        flex-flow:row wrap;
+    display:flex;
+    flex-flow:row wrap;
+    
 
-        $card_margin:8px;
-        $wrapper_padding:40px;
+    margin-left:-8px;
+    margin-right:-8px;
 
-        margin:#{$wrapper_padding + $card_margin} -#{$wrapper_padding + $card_margin};
-        padding:$wrapper_padding;
+    a {
+        flex:0 0 calc(100% / 3 - 16px);
+        display:block;
+        color:#999;
+        background-color:#fff;
+        margin:8px;
+        padding:32px;
+        box-sizing:border-box;
+        height:300px;
+    }
 
-        a {
-            flex:0 0 calc(100% / 3 - 16px);
-            display:block;
-            color:#999;
-            background-color:#fff;
-            margin:8px;
-            padding:32px;
-            box-sizing:border-box;
-            height:300px;
+    .card {
 
-            transition:box-shadow 0.3s;
+        height:auto;
 
-            &:hover {
-              box-shadow: 0 28px 40px 0 rgba(0, 0, 0, 0.16);
-            }
+        h3 {
+            font-weight:300;
+            font-size:rem(20);
+            color:#333;
         }
 
-        .card {
-
-            height:auto;
-
-            h3 {
-                font-weight:300;
-                font-size:rem(20);
-                color:#333;
-            }
-
-
-        }
 
     }
+
 }

@@ -9,12 +9,12 @@
 
 <article>
     <h1>
-        <img src="./image/symbol-alert.svg" alt="">
+        <img src="/image/symbol-alert.svg" alt="">
         키페어가 생성되었어요. 꼭 복사해두세요!
     </h1>
     <p>계정을 증명할 중요한 정보니 복사하여 안전하게 보관하세요!</p>
 
-    <dl>
+    <dl class="keybox">
         <dt>퍼블릭 키</dt>
         <dd>werwerewrwrwerwerwerwerwerewrwrwerwerwerwerwerewrwrwerwerwerwwwwerwerewrwrwerwerwerw</dd>
         
@@ -22,9 +22,39 @@
         <dd>werwerewrwrwerwerwerw</dd>
     </dl>
 
-    <button type="button" class="button copy blue_white">한번에 복사하기</button>
+    <textarea id="key" wai-aria="hidden" class="hidden_copy_field">PublicKey:sdfsdfsdf
+PrivateKey:wefwefwefwef</textarea>
+
+    <button type="button" id="copy" class="button copy blue_white">한번에 복사하기</button>
 </article>
 <div class="btn_area">
-    <button type="button" class="button" disabled>다음</button>
+    <button type="button" id="next" class="white_blue button" disabled>다음</button>
 </div>
+
+
+<!-- script for demo -->
+<script>
+function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("myInput");
+
+    /* Select the text field */
+    copyText.select();
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+}
+
+document.getElementById('copy').addEventListener('click',function (){
+    var target = document.getElementById('key');
+    target.select();
+    document.execCommand("copy");
+
+    document.getElementById('next').removeAttribute('disabled');
+});
+</script>
+
 <!-- @@close -->

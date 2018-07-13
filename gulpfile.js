@@ -78,7 +78,7 @@ elm 파 볼 시간이 안되서 미리 만드는 eoshub UI 전용 저장소입�
 var buildIndexHtmlOption = require('./_config/build-index-option.js');      // 설정파일 로딩
 gulp.task('make:index.html', function () {
     return gulp.src([
-        path.source.html + '/*.html',    // 전체를 포함
+        path.source.html + '/**/*.html',    // 전체를 포함
         '!**/_common/**',     // 공통파일은 포함하지 않음.
         '!**/@snippet/**',    // 조각파일도 포함하지 않음.
         '!**/_resource/**',    // 로컬 리소스 폴더도 포함하지 않음.
@@ -115,7 +115,7 @@ gulp.task('watch', function(callback) {
         path.source.html+'/**/*.html',
     ], ['html'],callback);
 
-    // 이미지 수정처리
+    // 이미지 수정처3
     gulp.watch(path.source.image+'/*.{png,jpg,gif,svg}', ['copy:image'],callback);
 });
 
@@ -144,7 +144,7 @@ gulp.task('convert:sass:sourcemap', function () {
 
 // html 처리
 gulp.task('html',function () {
-    return gulp.src(path.source.html + '/*.html')
+    return gulp.src(path.source.html + '/**/*.html')
         .pipe(extender({
             annotations: false,
             verbose: false
