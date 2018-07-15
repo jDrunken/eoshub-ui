@@ -27,7 +27,7 @@
 
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
 <main>
@@ -35,23 +35,31 @@
         <div class="container join">
 
 <ol class="progress bar">
-    <li class="done">인증하기</li>
+    <li class="ing">인증하기</li>
     <li>키 생성</li>
     <li>계정생성</li>
 </ol>
 
 <article>
     <h1>
-        <img src="/image/symbol-complete.svg" alt="">
-        이메일 인증완료!
+        <img src="/image/symbol-smile.svg" alt="">
+        새 계정 생성을 위해 이메일을 인증하세요!
     </h1>
-    <p>다음으로 넘어가주세요</p>
+    <p>받으신 메일의 링크를 클릭해주세요.</p>
 
-    <h2>example@email.com</h2>
+    <form action="">
+        <input type="email" placeholder="example@email.com" required />
+        <button type="button" class="">링크 보내기</button>
+    </form>
 </article>
 <div class="btn_area">
-    <button type="button" class="middle white_blue button">다음</button>
+    <button type="button" class="middle white_blue button" disabled>다음</button>
 </div>
+
+<p class="exist_account">
+    이미 이오스 계정이 있으신가요?
+    <a href="#">로그인하기</a>
+</p>
 
         </div>
     </div>
