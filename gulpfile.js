@@ -196,6 +196,6 @@ gulp.task('local', function () {
 });
 
 gulp.task('deploy', function () {
-    runSequence('clean',['copy:image','copy:conf'],'convert:sass', 'html','release');
+    runSequence('clean','make:index.html',['copy:image','copy:conf'],'convert:sass:sourcemap', 'html','release');
 });
 

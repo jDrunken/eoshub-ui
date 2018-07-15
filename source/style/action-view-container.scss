@@ -66,7 +66,7 @@
         right:64px;
 
         a {
-            background:url('/image/icon-info-mark.svg') left center no-repeat;
+            background:url('../image/icon-info-mark.svg') left center no-repeat;
             background-size:16px 16px;
             padding-left:20px;
             font-size:rem(14);
@@ -170,15 +170,15 @@
         }
 
         li.account {
-            background-image:url('/image/icon-account.svg');
+            background-image:url('../image/icon-account.svg');
         }
 
         li.eos {
-            background-image:url('/image/icon-eos.svg');
+            background-image:url('../image/icon-eos.svg');
         }
 
         li.memo {
-            background-image:url('/image/icon-memo.svg');
+            background-image:url('../image/icon-memo.svg');
         }
     }
 
@@ -224,19 +224,19 @@
                 position:absolute;
                 right:10px;
                 top:10px;
-                background:url('/image/icon-close-white-transparent.svg') center center no-repeat;
+                background:url('../image/icon-close-white-transparent.svg') center center no-repeat;
                 width:20px;
                 height:20px;
             }
         }
 
         .view.success {
-            background:url('/image/symbol-smile-white.svg') 285px 36px no-repeat #79c720;
+            background:url('../image/symbol-smile-white.svg') 285px 36px no-repeat #79c720;
             background-size:81px;
         }
 
         .view.fail {
-            background:url('/image/symbol-alert-white.svg') 285px 36px no-repeat #ff6b64;
+            background:url('../image/symbol-alert-white.svg') 285px 36px no-repeat #ff6b64;
             background-size:81px;
         }
     }

@@ -25,7 +25,7 @@ $padding_bottom:36px;
         width:91px;
         height:20px;
         
-        background:url('/image/ci_eoshub.png') center center no-repeat transparent;
+        background:url('../image/ci_eoshub.png') center center no-repeat transparent;
         background-size:cover;
     }
 
@@ -40,7 +40,7 @@ $padding_bottom:36px;
     }
 
     button.folding.button {
-        background:url('/image/lnb_fold_button.svg') left top no-repeat transparent;
+        background:url('../image/lnb_fold_button.svg') left top no-repeat transparent;
         background-size:cover;
     }
 }
@@ -117,15 +117,15 @@ $padding_bottom:36px;
             background-position:left top;
 
             &.fb {
-                background-image:url('/image/ci_facebook.svg');
+                background-image:url('../image/ci_facebook.svg');
             }
 
             &.twitter {
-                background-image:url('/image/ci_twitter.svg');
+                background-image:url('../image/ci_twitter.svg');
             }
 
             &.telegram {
-                background-image:url('/image/ci_telegram.svg');
+                background-image:url('../image/ci_telegram.svg');
             }
         }
     }
@@ -222,7 +222,7 @@ button.lang {
         &:before {
             content:'';
             display:inline-block;
-            background:url('/image/symbol-smile-white.svg') center center no-repeat #4d6bff;
+            background:url('../image/symbol-smile-white.svg') center center no-repeat #4d6bff;
             background-size:26px 26px;
             height:48px;
             width:48px;
@@ -246,7 +246,7 @@ button.lang {
 
                 width:20px;
                 height:20px;
-                background:url('/image/icon-setting.svg') center center no-repeat;
+                background:url('../image/icon-setting.svg') center center no-repeat;
                 background-size:cover;
             }
 
@@ -369,7 +369,7 @@ button.lang {
     text-align:center;
 
     a {
-        background:url('/image/icon-info-mark.svg') left center no-repeat;
+        background:url('../image/icon-info-mark.svg') left center no-repeat;
         background-size:16px 16px;
         padding-left:20px;
         font-size:rem(14);
