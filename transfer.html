@@ -1,6 +1,63 @@
-<!-- @@master = ../template/master.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
 
-<!-- @@block = dashboard -->
+
+<meta charset="UTF-8">
+
+<title>EOShub</title>
+
+<meta charset="utf-8">
+
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:title" content="tokenomia">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://tokenomia.com/bi_tokenomia.png">
+<meta property="og:url" content="https://tokenomia.com">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="http://tokenomia.io">
+<meta name="twitter:title" content="tokenomia">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://tokenomia.io/bi_tokenomia.png">
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+<main>
+    <div id="elm-target">
+        
+        <div class="container">
+            <div class="sidebar">
+                <header>
+                    <h1>eoshub</h1>
+                    <button type="button" id="lnbToggleButton" class="folding button" aria-hidden="true">사이드바 영역 닫기/열기</button>
+
+                    
+                    <script>
+                        (function () {
+                            var button = document.querySelector('header > button'),
+                                target = document.querySelector('div.sidebar');
+                            
+                            button.addEventListener('click',function (){
+                                target.classList.contains('fold') ? target.classList.remove('fold') : target.classList.add('fold');
+                            });
+                        })();
+                    
+
+                    </script>
+                </header>
+
+                
+
 <div class="dashboard logged">
     <div class="user_status">
         <h2>{{%_USER_%}}</h2>
@@ -14,7 +71,7 @@
         </div>
     </div>
 
-    <!-- status -->
+    
     <div class="panel">
         <h3>
             총 보유수량
@@ -45,9 +102,26 @@
         <a href="#">토큰 보관이 뭔가요?</a>
     </p>
 </div>
-<!-- @@close -->
 
-<!-- @@block = main -->
+
+                <nav>
+                    <div class="sns_area">
+                        
+                        <a href="#" class="sns fb button">Go to facebook</a>
+                        <a href="#" class="sns twitter button">Go to Twitter</a>
+                        <a href="#" class="sns telegram button">Go to Telegram</a>
+                    </div>
+
+                    <div class="lang_area">
+                        
+                        <button type="button" class="lang ko transparent button" data-lang="ko">한글</button>
+                        <button type="button" class="lang en transparent button" data-lang="en">ENG</button>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wrapper">
+
 <section class="tick_display">
     <form class="search">
         <input type="search" placeholder="계정명,퍼블릭키 검색하기">
@@ -119,5 +193,11 @@
         </div>
     </div>
 </section>
-<!-- @@close -->
 
+            </div>
+        </div>
+        
+    </div>
+</main>
+</body>
+</html>
