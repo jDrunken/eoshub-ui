@@ -11,6 +11,7 @@
   "devDependencies": {
     "del": "^3.0.0",
     "gulp-connect": "^5.5.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-html-extend": "^1.1.6",
     "gulp-index": "^0.2.0",
     "gulp-livereload": "^3.8.1",
@@ -21,5 +22,13 @@
   },
   "dependencies": {
     "gulp": "^3.9.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jDrunken/eoshub-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jDrunken/eoshub-ui/issues"
+  },
+  "homepage": "https://github.com/jDrunken/eoshub-ui#readme"
 }
