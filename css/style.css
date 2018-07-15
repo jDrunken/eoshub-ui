@@ -294,7 +294,7 @@ html, body, main, div#elm-target {
   overflow: hidden;
   width: 91px;
   height: 20px;
-  background: url("/image/ci_eoshub.png") center center no-repeat transparent;
+  background: url("../image/ci_eoshub.png") center center no-repeat transparent;
   background-size: cover;
 }
 
@@ -309,7 +309,7 @@ html, body, main, div#elm-target {
 }
 
 .sidebar header button.folding.button {
-  background: url("/image/lnb_fold_button.svg") left top no-repeat transparent;
+  background: url("../image/lnb_fold_button.svg") left top no-repeat transparent;
   background-size: cover;
 }
 
@@ -378,15 +378,15 @@ html, body, main, div#elm-target {
 }
 
 .sidebar nav a.sns.fb {
-  background-image: url("/image/ci_facebook.svg");
+  background-image: url("../image/ci_facebook.svg");
 }
 
 .sidebar nav a.sns.twitter {
-  background-image: url("/image/ci_twitter.svg");
+  background-image: url("../image/ci_twitter.svg");
 }
 
 .sidebar nav a.sns.telegram {
-  background-image: url("/image/ci_telegram.svg");
+  background-image: url("../image/ci_telegram.svg");
 }
 
 .sidebar nav div * {
@@ -462,7 +462,7 @@ button.lang {
 .dashboard.logged div.user_status:before {
   content: '';
   display: inline-block;
-  background: url("/image/symbol-smile-white.svg") center center no-repeat #4d6bff;
+  background: url("../image/symbol-smile-white.svg") center center no-repeat #4d6bff;
   background-size: 26px 26px;
   height: 48px;
   width: 48px;
@@ -487,7 +487,7 @@ button.lang {
   overflow: hidden;
   width: 20px;
   height: 20px;
-  background: url("/image/icon-setting.svg") center center no-repeat;
+  background: url("../image/icon-setting.svg") center center no-repeat;
   background-size: cover;
 }
 
@@ -602,7 +602,7 @@ button.lang {
 }
 
 .dashboard.logged p.help a {
-  background: url("/image/icon-info-mark.svg") left center no-repeat;
+  background: url("../image/icon-info-mark.svg") left center no-repeat;
   background-size: 16px 16px;
   padding-left: 20px;
   font-size: 0.875rem;
@@ -743,7 +743,7 @@ button.lang {
 }
 
 .action.view.panel.transfer p.help.info a {
-  background: url("/image/icon-info-mark.svg") left center no-repeat;
+  background: url("../image/icon-info-mark.svg") left center no-repeat;
   background-size: 16px 16px;
   padding-left: 20px;
   font-size: 0.875rem;
@@ -841,15 +841,15 @@ button.lang {
 }
 
 .action.view.panel.transfer .card li.account {
-  background-image: url("/image/icon-account.svg");
+  background-image: url("../image/icon-account.svg");
 }
 
 .action.view.panel.transfer .card li.eos {
-  background-image: url("/image/icon-eos.svg");
+  background-image: url("../image/icon-eos.svg");
 }
 
 .action.view.panel.transfer .card li.memo {
-  background-image: url("/image/icon-memo.svg");
+  background-image: url("../image/icon-memo.svg");
 }
 
 .action.view.panel.transfer .btn_area button.middle {
@@ -896,18 +896,18 @@ button.lang {
   position: absolute;
   right: 10px;
   top: 10px;
-  background: url("/image/icon-close-white-transparent.svg") center center no-repeat;
+  background: url("../image/icon-close-white-transparent.svg") center center no-repeat;
   width: 20px;
   height: 20px;
 }
 
 .action.view.panel.transfer .notification.panel .view.success {
-  background: url("/image/symbol-smile-white.svg") 285px 36px no-repeat #79c720;
+  background: url("../image/symbol-smile-white.svg") 285px 36px no-repeat #79c720;
   background-size: 81px;
 }
 
 .action.view.panel.transfer .notification.panel .view.fail {
-  background: url("/image/symbol-alert-white.svg") 285px 36px no-repeat #ff6b64;
+  background: url("../image/symbol-alert-white.svg") 285px 36px no-repeat #ff6b64;
   background-size: 81px;
 }
 
