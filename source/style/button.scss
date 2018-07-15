@@ -48,6 +48,13 @@ input[type='submit'] {
         border-color: #fff;
         color:#fff;
     }
+
+    &.lightgray_white {
+        border-radius: 2px;
+        background-color: transparent;
+        border-color: #c3c3c3;
+        color:#c3c3c3;
+    }
 }
 
 // background image
