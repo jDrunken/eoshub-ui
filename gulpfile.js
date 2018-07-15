@@ -23,7 +23,10 @@ var gulp = require('gulp')
     removeHtmlComment = require('gulp-remove-html-comments')
 
     // 루트에 간추린 파일을 만듬
-    makeIndex    = require('gulp-index')
+    makeIndex    = require('gulp-index'),
+
+    // gulp-gh-pages
+    publish = require('gulp-gh-pages'),
 ;
 
 
@@ -171,6 +174,14 @@ gulp.task('copy:conf',function () {
         .pipe(livereload());
 });
 
+// 배포
+gulp.task('release', function () {
+    return gulp.src(path.deploy + '/**/*')
+        .pipe(publish({
+            force : true,
+            message : 'eoshub :: 깃허브 페이지에 반영됨. Published to Github pages'
+        }))
+});
 
 // --------------------------------------------------------------------------------
 // pipe running
@@ -184,4 +195,7 @@ gulp.task('local', function () {
     runSequence('clean','make:index.html',['copy:image','copy:conf'],'convert:sass:sourcemap', 'html',['connect','watch']);
 });
 
+gulp.task('deploy', function () {
+    runSequence('clean',['copy:image','copy:conf'],'convert:sass', 'html','release');
+});
 
