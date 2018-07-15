@@ -26,7 +26,7 @@ var gulp = require('gulp')
     makeIndex    = require('gulp-index'),
 
     // gulp-gh-pages
-    publish = require('gulp-gh-pages'),
+    publish = require('gulp-gh-pages')
 ;
 
 
