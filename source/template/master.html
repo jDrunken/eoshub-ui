@@ -15,13 +15,25 @@
             <div class="sidebar">
                 <header>
                     <h1>eoshub</h1>
-                    <button type="button" class="bugger button" aria-hidden="true">사이드바 영역 닫기/열기</button>
+                    <button type="button" id="lnbToggleButton" class="folding button" aria-hidden="true">사이드바 영역 닫기/열기</button>
+
+                    <!-- demo script :: sidebar fold/unfold -->
+                    <script>
+                        (function () {
+                            var button = document.querySelector('header > button'),
+                                target = document.querySelector('div.sidebar');
+                            
+                            button.addEventListener('click',function (){
+                                target.classList.contains('fold') ? target.classList.remove('fold') : target.classList.add('fold');
+                            });
+                        })();
+                    
+
+                    </script>
                 </header>
 
                 <!-- 로그인 전 -->
-                <!-- @@placeholder = before_login -->
-                <!-- @@placeholder = after_login_not_yet -->
-                <!-- @@placeholder = after_login_synced -->
+                <!-- @@placeholder = dashboard -->
 
                 <nav>
                     <div class="sns_area">

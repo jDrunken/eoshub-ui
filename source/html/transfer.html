@@ -1,0 +1,123 @@
+<!-- @@master = ../template/master.html -->
+
+<!-- @@block = dashboard -->
+<div class="dashboard logged">
+    <div class="user_status">
+        <h2>{{%_USER_%}}</h2>
+        <div class="config_panel">
+            <button type="button" class="icon gear button" wai-aria="hiddel">option</button>
+            <div class="menu_list">
+                <a href="#">지갑 변경하기</a>
+                <a href="#">내 계정보기</a>
+                <a href="#">로그아웃</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- status -->
+    <div class="panel">
+        <h3>
+            총 보유수량
+            <strong>1820 EOS</strong>
+        </h3>
+
+        <ul class="status">
+            <li>
+                보관취소 토큰
+                <strong>30 EOS</strong>
+            </li>
+            <li>
+                보관한 토큰
+                <strong>10 EOS</strong>
+            </li>
+        </ul>
+        <div class="graph">
+            <span style="width:50%" title="50%"></span>
+        </div>
+        <p class="description">원활한 트랜잭션 사용이 가능합니다.</p>
+    </div>
+
+    <div class="btn_area">
+        <a href="#" class="middle lightgray_white button manage">토큰 보관 관리하기</a>
+    </div>
+
+    <p class="help">
+        <a href="#">토큰 보관이 뭔가요?</a>
+    </p>
+</div>
+<!-- @@close -->
+
+<!-- @@block = main -->
+<section class="tick_display">
+    <form class="search">
+        <input type="search" placeholder="계정명,퍼블릭키 검색하기">
+        <button type="button" class="search button">검색하기</button>
+    </form>
+    <ul class="price">
+        <li>
+            이오스 시세
+            <span data-before="lower">
+                1.000 EOS
+            </span>
+        </li>
+        <li>
+            RAM 가격 
+            <span data-before="higher">
+                1.000 EOS
+            </span>
+        </li>
+    </ul>
+</section>
+
+<section class="action view panel transfer">
+    <h3>전송하기</h3>
+    <p>총 보유수량과 전송가능한 수량은<br />
+    보관 취소중인 수량에 따라 다를 수 있습니다.</p>
+
+    <p class="help info">
+        <a href="#">전송이 혹시 처음이신가요?</a>
+    </p>
+    <div class="card">
+        <h4>
+            전송 가능한 수량<br />
+            <strong>120 EOS</strong>
+        </h4>
+
+        <form>
+            <ul>
+                <li class="account">
+                    <input id="rcvAccount" type="text" placeholder="받는 계정">
+                    <span>알맞은 계정이름인지 확인해주세요.</span>
+                </li>
+                <li class="eos">
+                    <input type="eos" type="number" placeholder="00">
+                    <span class="warning">전송 가능한 수량보다 많아요!</span>
+                </li>
+                <li class="memo">
+                    <input type="eos" type="text" placeholder="메모하기">
+                    <span>필수입력은 아니에요</span>
+                </li>
+            </ul>
+
+            <div class="btn_area">
+                <button type="button" class="middle blue_white" disabled>전송하기</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="notification" class="notification panel">
+        <div class="view success">
+            <p>{{%user%}}에게 전송완료!</p>
+            <a href="">+ 내역 보러가기</a>
+            <button type="button" class="icon close button">닫기</button>
+        </div>
+
+        <div class="view fail">
+            <p>402코드오류로 전송실패</p>
+            <a href="">+ 오류 확인하러 가기</a>
+            <button type="button" class="icon close button">닫기</button>
+        </div>
+    </div>
+</section>
+<!-- @@close -->
+
