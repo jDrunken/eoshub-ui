@@ -495,8 +495,8 @@ button.lang {
   display: none;
   position: absolute;
   z-index: 99;
-  top: 18px;
-  left: 18px;
+  top: 10px;
+  left: 13px;
   border: 1px solid #d8d8d8;
   border-top: 0;
 }
@@ -510,9 +510,15 @@ button.lang {
   line-height: 38px;
   text-align: center;
   color: #999;
+  font-size: 0.875rem;
 }
 
-.dashboard.logged div.user_status div.config_panel button.gear:hover + div.menu_list {
+.dashboard.logged div.user_status div.config_panel div.menu_list a:hover {
+  color: #777;
+  background-color: #f5f5f5;
+}
+
+.dashboard.logged div.user_status div.config_panel.expand div.menu_list {
   display: block;
 }
 
@@ -543,8 +549,8 @@ button.lang {
   display: block;
   position: absolute;
   top: -68px;
-  left: -32px;
-  right: -36px;
+  left: -40px;
+  right: -40px;
   height: 1px;
   background: #e8e8e8;
 }
@@ -868,6 +874,9 @@ button.lang {
   position: absolute;
   right: 64px;
   bottom: 64px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(100%);
 }
 
 .action.view.panel.transfer .notification.panel div {
@@ -899,6 +908,12 @@ button.lang {
   background: url("../image/icon-close-white-transparent.svg") center center no-repeat;
   width: 20px;
   height: 20px;
+  outline: 0;
+  transition: transform 0.1s;
+}
+
+.action.view.panel.transfer .notification.panel div button.close:hover {
+  transform: scale(1.1);
 }
 
 .action.view.panel.transfer .notification.panel .view.success {
@@ -909,6 +924,11 @@ button.lang {
 .action.view.panel.transfer .notification.panel .view.fail {
   background: url("../image/symbol-alert-white.svg") 285px 36px no-repeat #ff6b64;
   background-size: 81px;
+}
+
+.action.view.panel.transfer .notification.panel.viewing {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .container.join {

@@ -62,13 +62,28 @@
     <div class="user_status">
         <h2>{{%_USER_%}}</h2>
         <div class="config_panel">
-            <button type="button" class="icon gear button" wai-aria="hiddel">option</button>
+            <button type="button" class="icon gear button" wai-aria="hidden">option</button>
             <div class="menu_list">
                 <a href="#">지갑 변경하기</a>
                 <a href="#">내 계정보기</a>
                 <a href="#">로그아웃</a>
             </div>
         </div>
+        
+        <script>
+        (function () {
+            var handler = document.querySelector('div.config_panel button.gear'),
+                target = document.querySelector('div.config_panel');
+
+            handler.addEventListener('click',function () {
+                target.classList.toggle('expand');
+            });
+
+            target.addEventListener('mouseleave',function () {
+                target.classList.remove('expand');
+            });
+        })();
+        </script>
     </div>
 
     
@@ -149,7 +164,7 @@
     보관 취소중인 수량에 따라 다를 수 있습니다.</p>
 
     <p class="help info">
-        <a href="#">전송이 혹시 처음이신가요?</a>
+        <a href="#">토큰 전송이 처음이신가요?</a>
     </p>
     <div class="card">
         <h4>
@@ -174,7 +189,7 @@
             </ul>
 
             <div class="btn_area">
-                <button type="button" class="middle blue_white" disabled>전송하기</button>
+                <button type="button" id="send" class="middle blue_white">전송하기</button>
             </div>
         </form>
     </div>
@@ -192,6 +207,27 @@
             <button type="button" class="icon close button">닫기</button>
         </div>
     </div>
+    
+    <script>
+    (function () {
+        var button = {
+            view : document.getElementById('send'),
+            close : document.querySelector('#notification button.icon.close.button')
+        }
+            target = document.getElementById('notification');
+
+        button.view.addEventListener('click',function () {
+            target.classList.add('viewing');
+        });
+
+
+        button.close.addEventListener('click',function () {
+            target.classList.remove('viewing');
+        });
+    })();
+    </script>
+
+
 </section>
 
             </div>
