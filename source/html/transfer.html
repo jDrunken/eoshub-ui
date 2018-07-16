@@ -4,14 +4,25 @@
 <div class="dashboard logged">
     <div class="user_status">
         <h2>{{%_USER_%}}</h2>
-        <div class="config_panel">
-            <button type="button" class="icon gear button" wai-aria="hiddel">option</button>
+        <div class="config_panel expand">
+            <button type="button" class="icon gear button" wai-aria="hidden">option</button>
             <div class="menu_list">
                 <a href="#">지갑 변경하기</a>
                 <a href="#">내 계정보기</a>
                 <a href="#">로그아웃</a>
             </div>
         </div>
+        <!-- pseudo script :: sub menu expand when config icon clicked -->
+        <script>
+        (function () {
+            var handler = document.querySelector('div.config_panel button.gear'),
+                target = document.querySelector('div.config_panel');
+
+            handler.addEventListener('click',function () {
+                target.classList.toggle('expand');
+            });
+        })();
+        </script>
     </div>
 
     <!-- status -->
@@ -105,7 +116,7 @@
         </form>
     </div>
 
-    <div id="notification" class="notification panel">
+    <div id="notification" class="notification panel viewing">
         <div class="view success">
             <p>{{%user%}}에게 전송완료!</p>
             <a href="">+ 내역 보러가기</a>
@@ -118,6 +129,10 @@
             <button type="button" class="icon close button">닫기</button>
         </div>
     </div>
+    <!-- pseudo script :: notifier -->
+    바인딩 하고 나서...
+
+
 </section>
 <!-- @@close -->
 
