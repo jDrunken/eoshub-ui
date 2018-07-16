@@ -739,6 +739,12 @@ button.lang {
   color: #333;
 }
 
+.action.view.panel .card p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #999;
+}
+
 .action.view.panel .card {
   background-position: right bottom;
   background-color: transparent;
@@ -795,12 +801,6 @@ button.lang {
   font-weight: 300;
   font-size: 1.5rem;
   color: #333;
-}
-
-.action.view.panel.transfer p {
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: #999;
 }
 
 .action.view.panel.transfer p.help.info a {
