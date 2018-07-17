@@ -51,6 +51,10 @@ $padding_bottom:36px;
         font-weight:300;
         line-height:1.4;
     }
+
+    &.hello_world h2 {
+        background:url('../image/symbol-smile.svg') right center no-repeat transparent;
+    }
 }
 
 
@@ -67,10 +71,6 @@ $padding_bottom:36px;
 
     .help.info {
         margin-top:21px;
-        padding-left:20px;
-        background-position:left center;
-        background-color:transparent;
-        background-repeat:no-repeat;
 
         a {
             color:#737a8d;
