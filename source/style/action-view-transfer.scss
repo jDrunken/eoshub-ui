@@ -1,6 +1,17 @@
 @charset 'UTF-8';
 
 .action.view.panel.transfer {
+    // var
+    $padding:64px;
+
+    background:#fff;
+
+    margin:48px 0 0 0;
+    padding:$padding;
+    text-align:left;
+
+    display:block;
+    position:relative;
     nav {
         position:absolute;
         right:64px;

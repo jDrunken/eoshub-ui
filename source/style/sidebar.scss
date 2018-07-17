@@ -154,27 +154,6 @@ button.lang {
 }
 
 
-// sidebar :: fold/unfold
-.sidebar {
-    transition:margin 0.2s linear;
-}
-
-.sidebar.fold {
-    margin-left:-300px;
-    // flex-basis:100px;
-    overflow:hidden;
-
-    * {
-        visibility:hidden;
-    }
-
-    button.folding.button {
-        visibility:visible;
-    }
-}
-
-
-
 // element :: available wallet for peristalsis
 .sidebar .available_wallet_list {
     list-style-type:none;
@@ -388,3 +367,27 @@ button.lang {
         color:#737a8d;
     }
 }
+
+
+// sidebar :: fold/unfold
+.sidebar {
+    transition:margin 0.2s linear;
+}
+
+.sidebar.fold {
+    margin-left:-300px;
+    overflow:hidden;
+    box-shadow: 2px 0 6px 0 rgba(0, 0, 0, 0.08);
+    
+
+    * {
+        visibility:hidden;
+    }
+
+    button.folding.button {
+        visibility:visible;
+    }
+}
+
+
+

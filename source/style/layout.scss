@@ -1,11 +1,9 @@
 @charset 'UTF-8';
 
 $lnb_width:400px;
-$whole_width_min:1060px;
-$whole_width_max:1280px;
 
 html,body,main,div#elm-target {
-    min-width:1280px;
+    min-width:1250px;
     width:100%;
     height:100%;
 }
