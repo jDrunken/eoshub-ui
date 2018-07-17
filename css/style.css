@@ -227,12 +227,12 @@ input[type='submit'].bugger.button {
 }
 
 html, body, main, div#elm-target {
+  min-width: 1280px;
   width: 100%;
   height: 100%;
 }
 
 .container {
-  min-width: 1540px;
   min-height: 760px;
   background-color: #f5f6fb;
   position: relative;
@@ -272,7 +272,6 @@ html, body, main, div#elm-target {
 
 .container .wrapper .tick_display {
   flex: 0 0 52px;
-  order: 1;
 }
 
 .container .wrapper:before {
@@ -416,23 +415,6 @@ button.lang {
 
 .lang.en:lang(en) {
   font-weight: 700;
-}
-
-.sidebar {
-  transition: margin 0.2s linear;
-}
-
-.sidebar.fold {
-  margin-left: -300px;
-  overflow: hidden;
-}
-
-.sidebar.fold * {
-  visibility: hidden;
-}
-
-.sidebar.fold button.folding.button {
-  visibility: visible;
 }
 
 .sidebar .available_wallet_list {
@@ -632,6 +614,24 @@ button.lang {
   color: #737a8d;
 }
 
+.sidebar {
+  transition: margin 0.2s linear;
+}
+
+.sidebar.fold {
+  margin-left: -300px;
+  overflow: hidden;
+  box-shadow: 2px 0 6px 0 rgba(0, 0, 0, 0.08);
+}
+
+.sidebar.fold * {
+  visibility: hidden;
+}
+
+.sidebar.fold button.folding.button {
+  visibility: visible;
+}
+
 .wrapper section.tick_display {
   margin-bottom: 8px;
   display: flex;
@@ -639,10 +639,14 @@ button.lang {
 }
 
 .wrapper section.tick_display form {
+  flex: 0 1 432px;
   position: relative;
   width: 432px;
   height: 52px;
   font-size: 0.875rem;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
 }
 
 .wrapper section.tick_display form input, .wrapper section.tick_display form button {
@@ -653,20 +657,15 @@ button.lang {
 .wrapper section.tick_display form input[type=search] {
   border-radius: 4px;
   border: 0;
-  padding: 0;
-  width: inherit;
+  flex: 1;
   height: inherit;
-  padding-left: 56px;
-  background: url("../image/icon-search.svg") 20px center no-repeat #fff;
+  padding: 0 28px 0 56px;
+  background: url("../image/icon-search.svg") 20px center no-repeat;
   background-size: 24px 24px;
 }
 
 .wrapper section.tick_display form button.search.button {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  padding-right: 20px;
+  margin-right: 20px;
   color: #333;
 }
 
@@ -676,6 +675,7 @@ button.lang {
 }
 
 .wrapper section.tick_display ul, .wrapper section.tick_display li {
+  flex: 1 0 60%;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -686,7 +686,8 @@ button.lang {
 }
 
 .wrapper section.tick_display ul.price li {
-  width: 300px;
+  width: 45%;
+  max-width: 300px;
   height: 52px;
   line-height: 52px;
   float: right;
@@ -703,6 +704,7 @@ button.lang {
 
 .wrapper section.tick_display ul.price span:before {
   font-size: 0.5rem;
+  margin-left: 1.2em;
 }
 
 .wrapper section.tick_display ul.price span[data-before='lower']:before {
@@ -740,14 +742,12 @@ button.lang {
   height: 300px;
   border-radius: 4px;
   transition: box-shadow 0.2s;
+  position: relative;
 }
 
 .action.view.panel > a:hover {
   box-shadow: 0 28px 40px 0 rgba(0, 0, 0, 0.16);
-}
-
-.action.view.panel .card {
-  height: auto;
+  z-index: 2;
 }
 
 .action.view.panel .card h3 {
@@ -763,237 +763,51 @@ button.lang {
 }
 
 .action.view.panel .card {
+  height: 100%;
+  position: relative;
+}
+
+.action.view.panel .card:before {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 55%;
+  max-height: 115px;
+  height: 60%;
+  background: #600;
+  bottom: 0;
+  right: 0;
   background-position: right bottom;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-size: 400px;
-  height: 100%;
+  background-size: contain;
 }
 
-.action.view.panel .card.transfer {
+.action.view.panel .card.transfer:before {
   background-image: url("../image/bg-transfer.svg");
 }
 
-.action.view.panel .card.vote {
+.action.view.panel .card.vote:before {
   background-image: url("../image/bg-vote.svg");
 }
 
-.action.view.panel .card.ram_market {
+.action.view.panel .card.ram_market:before {
   background-image: url("../image/bg-ram-market.svg");
 }
 
-.action.view.panel .card.faq {
+.action.view.panel .card.faq:before {
   background-image: url("../image/bg-faq.svg");
 }
 
-.action.view.panel .card.proxy_vote {
+.action.view.panel .card.proxy_vote:before {
   background-image: url("../image/bg-proxy-vote.svg");
+  width: 90%;
+  height: 90%;
+  max-height: 150px;
 }
 
-.action.view.panel .card.application {
+.action.view.panel .card.application:before {
   background-image: url("../image/bg-dapp.svg");
-}
-
-.action.view.panel.transfer nav {
-  position: absolute;
-  right: 64px;
-  font-size: 0.875rem;
-}
-
-.action.view.panel.transfer nav a {
-  color: #333;
-  margin-left: 24px;
-}
-
-.action.view.panel.transfer nav a.viewing {
-  font-weight: bold;
-}
-
-.action.view.panel.transfer {
-  background: #fff;
-  margin: 48px 0 0 0;
-  padding: 64px;
-  text-align: left;
-  display: block;
-  position: relative;
-}
-
-.action.view.panel.transfer h3 {
-  font-weight: 300;
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.action.view.panel.transfer p.help.info a {
-  background: url("../image/icon-info-mark.svg") left center no-repeat;
-  background-size: 16px 16px;
-  padding-left: 20px;
-  font-size: 0.875rem;
-  color: #737a8d;
-}
-
-.action.view.panel.transfer .card {
-  margin: 23px auto;
-  width: 394px;
-  border-radius: 4px;
-  background-color: #536dfe;
-  color: #fff;
-  padding: 56px 48px;
-  box-sizing: border-box;
-}
-
-.action.view.panel.transfer .card h4 {
-  text-align: center;
-  font-weight: 300;
-  font-size: 0.875rem;
-}
-
-.action.view.panel.transfer .card h4 strong {
-  margin-top: 12px;
-  display: block;
-  font-weight: 300;
-  font-size: 2rem;
-}
-
-.action.view.panel.transfer .card ul, .action.view.panel.transfer .card li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.action.view.panel.transfer .card ul input, .action.view.panel.transfer .card li input {
-  display: block;
-  width: 100%;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #fff;
-  font-size: 1rem;
-  height: 40px;
-  padding: 12px 0;
-  box-sizing: border-box;
-}
-
-.action.view.panel.transfer .card ul input::placeholder, .action.view.panel.transfer .card li input::placeholder {
-  color: #fff;
-}
-
-.action.view.panel.transfer .card li {
-  padding-left: 32px;
-  margin-top: 32px;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-position: left 18px;
-}
-
-.action.view.panel.transfer .card li span {
-  margin-top: 8px;
-  display: block;
-  color: #c3c3c3;
-  font-size: 0.8125rem;
-}
-
-.action.view.panel.transfer .card li span.warning {
-  color: #ff6b64;
-}
-
-.action.view.panel.transfer .card li span.warning:before {
-  color: #fff;
-  content: '+';
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  font-size: 0.3125rem;
-  text-align: center;
-  line-height: 13px;
-  border-radius: 100%;
-  background: #ff6b64;
-  margin-right: 4px;
-  transform: rotate(45deg);
-}
-
-.action.view.panel.transfer .card li.account {
-  background-image: url("../image/icon-account.svg");
-}
-
-.action.view.panel.transfer .card li.eos {
-  background-image: url("../image/icon-eos.svg");
-}
-
-.action.view.panel.transfer .card li.memo {
-  background-image: url("../image/icon-memo.svg");
-}
-
-.action.view.panel.transfer .btn_area button.middle {
-  margin-top: 56px;
-  line-height: 50px;
-  height: 52px;
-  width: 100%;
-  font-size: 0.875rem;
-}
-
-.action.view.panel.transfer .btn_area button.middle:disabled {
-  color: #c3c3c3;
-}
-
-.action.view.panel.transfer .notification.panel {
-  position: absolute;
-  right: 64px;
-  bottom: 64px;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0;
-  transform: translateY(100%);
-}
-
-.action.view.panel.transfer .notification.panel div {
-  width: 406px;
-  height: 96px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  padding-left: 40px;
-  justify-content: center;
-  position: relative;
-}
-
-.action.view.panel.transfer .notification.panel div p {
-  margin: 0;
-  color: #fff;
-}
-
-.action.view.panel.transfer .notification.panel div a {
-  font-size: 0.8125rem;
-  color: #fff;
-}
-
-.action.view.panel.transfer .notification.panel div button.close {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  background: url("../image/icon-close-white-transparent.svg") center center no-repeat;
-  width: 20px;
-  height: 20px;
-  outline: 0;
-  transition: transform 0.1s;
-}
-
-.action.view.panel.transfer .notification.panel div button.close:hover {
-  transform: scale(1.1);
-}
-
-.action.view.panel.transfer .notification.panel .view.success {
-  background: url("../image/symbol-smile-white.svg") 285px 36px no-repeat #79c720;
-  background-size: 81px;
-}
-
-.action.view.panel.transfer .notification.panel .view.fail {
-  background: url("../image/symbol-alert-white.svg") 285px 36px no-repeat #ff6b64;
-  background-size: 81px;
-}
-
-.action.view.panel.transfer .notification.panel.viewing {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .action.view.panel.search_result {
@@ -1181,6 +995,208 @@ button.lang {
 
 .action.view.panel.search_result .transaction_history td {
   color: #666;
+}
+
+.action.view.panel.transfer {
+  background: #fff;
+  margin: 48px 0 0 0;
+  padding: 64px;
+  text-align: left;
+  display: block;
+  position: relative;
+}
+
+.action.view.panel.transfer nav {
+  position: absolute;
+  right: 64px;
+  font-size: 0.875rem;
+}
+
+.action.view.panel.transfer nav a {
+  color: #333;
+  margin-left: 24px;
+}
+
+.action.view.panel.transfer nav a.viewing {
+  font-weight: bold;
+}
+
+.action.view.panel.transfer h3 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.action.view.panel.transfer p.help.info a {
+  background: url("../image/icon-info-mark.svg") left center no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  font-size: 0.875rem;
+  color: #737a8d;
+}
+
+.action.view.panel.transfer .card {
+  margin: 23px auto;
+  width: 394px;
+  border-radius: 4px;
+  background-color: #536dfe;
+  color: #fff;
+  padding: 56px 48px;
+  box-sizing: border-box;
+}
+
+.action.view.panel.transfer .card h4 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+
+.action.view.panel.transfer .card h4 strong {
+  margin-top: 12px;
+  display: block;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.action.view.panel.transfer .card ul, .action.view.panel.transfer .card li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.action.view.panel.transfer .card ul input, .action.view.panel.transfer .card li input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  font-size: 1rem;
+  height: 40px;
+  padding: 12px 0;
+  box-sizing: border-box;
+}
+
+.action.view.panel.transfer .card ul input::placeholder, .action.view.panel.transfer .card li input::placeholder {
+  color: #fff;
+}
+
+.action.view.panel.transfer .card li {
+  padding-left: 32px;
+  margin-top: 32px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: left 18px;
+}
+
+.action.view.panel.transfer .card li span {
+  margin-top: 8px;
+  display: block;
+  color: #c3c3c3;
+  font-size: 0.8125rem;
+}
+
+.action.view.panel.transfer .card li span.warning {
+  color: #ff6b64;
+}
+
+.action.view.panel.transfer .card li span.warning:before {
+  color: #fff;
+  content: '+';
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  font-size: 0.3125rem;
+  text-align: center;
+  line-height: 13px;
+  border-radius: 100%;
+  background: #ff6b64;
+  margin-right: 4px;
+  transform: rotate(45deg);
+}
+
+.action.view.panel.transfer .card li.account {
+  background-image: url("../image/icon-account.svg");
+}
+
+.action.view.panel.transfer .card li.eos {
+  background-image: url("../image/icon-eos.svg");
+}
+
+.action.view.panel.transfer .card li.memo {
+  background-image: url("../image/icon-memo.svg");
+}
+
+.action.view.panel.transfer .btn_area button.middle {
+  margin-top: 56px;
+  line-height: 50px;
+  height: 52px;
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+.action.view.panel.transfer .btn_area button.middle:disabled {
+  color: #c3c3c3;
+}
+
+.action.view.panel.transfer .notification.panel {
+  position: absolute;
+  right: 64px;
+  bottom: 64px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.action.view.panel.transfer .notification.panel div {
+  width: 406px;
+  height: 96px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  justify-content: center;
+  position: relative;
+}
+
+.action.view.panel.transfer .notification.panel div p {
+  margin: 0;
+  color: #fff;
+}
+
+.action.view.panel.transfer .notification.panel div a {
+  font-size: 0.8125rem;
+  color: #fff;
+}
+
+.action.view.panel.transfer .notification.panel div button.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: url("../image/icon-close-white-transparent.svg") center center no-repeat;
+  width: 20px;
+  height: 20px;
+  outline: 0;
+  transition: transform 0.1s;
+}
+
+.action.view.panel.transfer .notification.panel div button.close:hover {
+  transform: scale(1.1);
+}
+
+.action.view.panel.transfer .notification.panel .view.success {
+  background: url("../image/symbol-smile-white.svg") 285px 36px no-repeat #79c720;
+  background-size: 81px;
+}
+
+.action.view.panel.transfer .notification.panel .view.fail {
+  background: url("../image/symbol-alert-white.svg") 285px 36px no-repeat #ff6b64;
+  background-size: 81px;
+}
+
+.action.view.panel.transfer .notification.panel.viewing {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .container.join {
