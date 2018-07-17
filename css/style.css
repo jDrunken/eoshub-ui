@@ -227,7 +227,7 @@ input[type='submit'].bugger.button {
 }
 
 html, body, main, div#elm-target {
-  min-width: 1280px;
+  min-width: 1250px;
   width: 100%;
   height: 100%;
 }
@@ -286,6 +286,14 @@ html, body, main, div#elm-target {
   order: 4;
 }
 
+p.help.info a {
+  background: url("../image/icon-info-mark.svg") left center no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  font-size: 0.875rem;
+  color: #737a8d;
+}
+
 .sidebar {
   background-color: #fff;
   padding: 32px 40px 36px;
@@ -329,6 +337,10 @@ html, body, main, div#elm-target {
   line-height: 1.4;
 }
 
+.sidebar .dashboard.hello_world h2 {
+  background: url("../image/symbol-smile.svg") right center no-repeat transparent;
+}
+
 .sidebar .dashboard .panel {
   color: #999;
   font-size: 0.875rem;
@@ -341,10 +353,6 @@ html, body, main, div#elm-target {
 
 .sidebar .dashboard .help.info {
   margin-top: 21px;
-  padding-left: 20px;
-  background-position: left center;
-  background-color: transparent;
-  background-repeat: no-repeat;
 }
 
 .sidebar .dashboard .help.info a {
@@ -1027,14 +1035,6 @@ button.lang {
   color: #333;
 }
 
-.action.view.panel.transfer p.help.info a {
-  background: url("../image/icon-info-mark.svg") left center no-repeat;
-  background-size: 16px 16px;
-  padding-left: 20px;
-  font-size: 0.875rem;
-  color: #737a8d;
-}
-
 .action.view.panel.transfer .card {
   margin: 23px auto;
   width: 394px;
@@ -1043,6 +1043,10 @@ button.lang {
   color: #fff;
   padding: 56px 48px;
   box-sizing: border-box;
+}
+
+.action.view.panel.transfer .card:before {
+  display: none;
 }
 
 .action.view.panel.transfer .card h4 {
