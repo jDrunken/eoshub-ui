@@ -29,9 +29,11 @@
         height:300px;
         border-radius:4px;
         transition:box-shadow 0.2s;
+        position:relative;
 
         &:hover {
           box-shadow: 0 28px 40px 0 rgba(0, 0, 0, 0.16);
+          z-index:2;
         }
     }
 
