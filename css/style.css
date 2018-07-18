@@ -623,7 +623,7 @@ button.lang {
 }
 
 .sidebar {
-  transition: margin 0.2s linear;
+  transition: margin 0.2s linear, box-shadow 0.2s linear;
 }
 
 .sidebar.fold {
