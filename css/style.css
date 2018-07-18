@@ -320,15 +320,38 @@ p.help.info a {
   position: absolute;
   top: 32px;
   right: 40px;
+}
+
+.sidebar header button.folding.button {
   text-indent: -999em;
   overflow: hidden;
   width: 20px;
   height: 20px;
+  background-size: cover;
+  border-radius: 2px;
+  background-color: #536dfe;
+  transition: background 0.5s;
 }
 
-.sidebar header button.folding.button {
-  background: url("../image/lnb_fold_button.svg") left top no-repeat transparent;
-  background-size: cover;
+.sidebar header button.folding.button:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  right: 3px;
+  bottom: 3px;
+  background: #fff;
+  border-radius: 1px;
+  transition: all 0.2s;
+}
+
+.sidebar.fold header button.folding {
+  background-color: #737a8d;
+}
+
+.sidebar.fold header button.folding:before {
+  left: 3px;
+  right: 50%;
 }
 
 .sidebar .dashboard h2 {
