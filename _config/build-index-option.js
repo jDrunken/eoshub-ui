@@ -20,7 +20,7 @@ module.exports = {
     'title-template': (title) =>`<h1 class="index__title">${title}</h1>
     `,
     // 어느 폴더부터 index 파일 생성에 필요한 정보를 찾을건지
-    'relativePath': './source/',
+    'relativePath': './src/',
     
     // 'relativePath'에서 몇 depth까지 root로 설정하고 싶은지
     'pathDepth': 1,
