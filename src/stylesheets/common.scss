@@ -8,3 +8,57 @@ p.help.info {
         color:#737a8d;
     }
 }
+
+
+
+
+// custom dropdown_list area
+
+.dropdown_list {
+    display:inline-block;
+    position:relative;   
+
+    button {
+        font-size:rem(14);
+
+        background-color:#fff;
+        height:40px;
+        line-height:40px;
+        display:block;
+        white-space:nowrap;
+
+        padding:0 16px;
+
+        border-width:1px;
+        border-style:solid;
+        border-color:#d8d8d8;
+
+        text-align:center;
+        border-radius:0;
+
+    }
+
+    div.wrapper {
+        position:relative;;
+        top:calc(100% - 1px);
+        z-index:2;
+        left:0;
+        right:0;
+
+        button {
+            width:100%;
+            border-top:0;           
+        }
+    }
+
+    // primary button
+    button[aria-level] {
+        padding-right:64px;
+        border-color:#737a8d;
+        border-radius:2px;
+    }
+
+    button[role="listitem"]  {
+    }
+
+}
