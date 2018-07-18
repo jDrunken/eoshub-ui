@@ -1142,16 +1142,14 @@ button.lang {
   color: #c3c3c3;
 }
 
-.action.view.panel.transfer .notification.panel {
+.notification.panel {
   position: absolute;
-  right: 64px;
-  bottom: 64px;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0;
-  transform: translateY(100%);
+  top: calc(50% + 209px);
+  right: calc(64px + 40px);
+  z-index: -1;
 }
 
-.action.view.panel.transfer .notification.panel div {
+.notification.panel div {
   width: 406px;
   height: 96px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
@@ -1163,17 +1161,17 @@ button.lang {
   position: relative;
 }
 
-.action.view.panel.transfer .notification.panel div p {
+.notification.panel div p {
   margin: 0;
   color: #fff;
 }
 
-.action.view.panel.transfer .notification.panel div a {
+.notification.panel div a {
   font-size: 0.8125rem;
   color: #fff;
 }
 
-.action.view.panel.transfer .notification.panel div button.close {
+.notification.panel div button.close {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -1184,21 +1182,31 @@ button.lang {
   transition: transform 0.1s;
 }
 
-.action.view.panel.transfer .notification.panel div button.close:hover {
+.notification.panel div button.close:hover {
   transform: scale(1.1);
 }
 
-.action.view.panel.transfer .notification.panel .view.success {
+.notification.panel .view.success {
   background: url("../image/symbol-smile-white.svg") 285px 36px no-repeat #79c720;
   background-size: 81px;
 }
 
-.action.view.panel.transfer .notification.panel .view.fail {
+.notification.panel .view.fail {
   background: url("../image/symbol-alert-white.svg") 285px 36px no-repeat #ff6b64;
   background-size: 81px;
 }
 
-.action.view.panel.transfer .notification.panel.viewing {
+.notification.panel div {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.notification.panel.viewing {
+  z-index: 1;
+}
+
+.notification.panel.viewing div {
   opacity: 1;
   transform: translateY(0);
 }

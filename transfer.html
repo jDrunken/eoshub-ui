@@ -204,27 +204,28 @@
         </form>
     </div>
 
-    <div id="notification" class="notification panel">
-        <div class="view success">
-            <p>{{%user%}}에게 전송완료!</p>
-            <a href="">+ 내역 보러가기</a>
-            <button type="button" class="icon close button">닫기</button>
-        </div>
-
-        <div class="view fail">
-            <p>402코드오류로 전송실패</p>
-            <a href="">+ 오류 확인하러 가기</a>
-            <button type="button" class="icon close button">닫기</button>
-        </div>
+</section>
+<div id="notification" class="notification panel">
+    <div class="view success">
+        <p>{{%user%}}에게 전송완료!</p>
+        <a href="">+ 내역 보러가기</a>
+        <button type="button" class="icon close button">닫기</button>
     </div>
-    
-    <script>
+
+    <div class="view fail">
+        <p>402코드오류로 전송실패</p>
+        <a href="">+ 오류 확인하러 가기</a>
+        <button type="button" class="icon close button">닫기</button>
+    </div>
+</div>
+
+<script>
     (function () {
         var button = {
             view : document.getElementById('send'),
             close : document.querySelector('#notification button.icon.close.button')
         }
-            target = document.getElementById('notification');
+        target = document.getElementById('notification');
 
         button.view.addEventListener('click',function () {
             target.classList.add('viewing');
@@ -235,10 +236,9 @@
             target.classList.remove('viewing');
         });
     })();
-    </script>
+</script>
 
 
-</section>
 
             </div>
         </div>
