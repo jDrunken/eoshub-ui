@@ -7,24 +7,41 @@
     <li>계정생성</li>
 </ol>
 
-<article>
+<article data-step="1">
     <h1>
         <img src="./image/symbol-smile.svg" alt="">
-        새 계정 생성을 위해 이메일을 인증하세요!
+        새로운 계정을 만들기 위해 이메일을 인증하세요!
     </h1>
     <p>받으신 메일의 링크를 클릭해주세요.</p>
 
     <form action="">
-        <input type="email" placeholder="example@email.com" required />
-        <button type="button" class="">링크 보내기</button>
+        <!-- valid / invalid 프로퍼티로 밸리데이션 여부를 체크합니다 -->
+        <input type="email" placeholder="example@email.com" required valid />
+        <span class="validate">이메일을 확인해주세요!</span>
+    </form>
+
+    <form action="">
+        <!-- valid / invalid 프로퍼티로 밸리데이션 여부를 체크합니다 -->
+        <input type="email" placeholder="example@email.com" required invalid />
+        <span class="validate">이미 존재하는 이메일입니다.</span>
     </form>
 </article>
 <div class="btn_area">
-    <button type="button" class="middle white_blue button" disabled>다음</button>
+    <!-- blocking에는 disabled proerty를 더해주세요.-->
+    <button type="button" class="middle white_blue send_email button" disabled>링크 보내기</button>
 </div>
 
 <p class="exist_account">
     이미 이오스 계정이 있으신가요?
     <a href="#">로그인하기</a>
 </p>
+
+
+
+<!-- demo script -->
+<script>
+document.querySelector('button.send_email').addEventListener('click',function () {
+    location.href = location.href.replace('1','2');
+});
+</script>
 <!-- @@close -->

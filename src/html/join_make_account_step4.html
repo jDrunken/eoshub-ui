@@ -7,28 +7,35 @@
     <li class="ing">계정생성</li>
 </ol>
 
-<article>
+<article data-step="4">
     <h1>
         <img src="./image/symbol-smile.svg" alt="">
-        원하는 계정의 이름을 입력해주세요.
+        원하는 계정의 이름을 입력해주세요!
     </h1>
-    <p>계정명은 반드시 12글자로 생성해야 합니다.</p>
+    <p>계정명은 1~5 사이의 숫자와 영어 소문자의 조합으로 12글자만 가능합니다!<br />
+ex) eoshuby12345</p>
 
     <form>
-        <input type="text" placeholder="계정이름은 반드시 12글자로 입력해주세요"  required />
+        <input type="text" class="account_name" placeholder="계정이름은 반드시 12글자로 입력해주세요"  required />
     </form>
 
     <form>
-        <input type="text" placeholder="계정이름은 반드시 12글자로 입력해주세요"  required invalid />
+        <input type="text" class="account_name" placeholder="계정이름은 반드시 12글자로 입력해주세요"  required invalid />
         <span>불가능한 ID에요</span>
     </form>
 
     <form>
-        <input type="text" placeholder="계정이름은 반드시 12글자로 입력해주세요"  required valid/>
+        <input type="text" class="account_name" placeholder="계정이름은 반드시 12글자로 입력해주세요"  required valid/>
         <span>가능한 ID에요</span>
     </form>
 </article>
 <div class="btn_area">
     <button type="button" class="middle blue_white button" disabled>다음</button>
 </div>
+<script>
+document.querySelector('button').addEventListener('click',function () {
+    location.href = location.href.replace('4','5');
+});
+</script>
+
 <!-- @@close -->
