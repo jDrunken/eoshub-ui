@@ -550,6 +550,11 @@ button.lang {
   text-transform: uppercase;
 }
 
+.sidebar .available_wallet_list li.scatter {
+  background: url("../image/bi-scatter@2x.png") left center no-repeat transparent;
+  background-size: 40px 40px;
+}
+
 .sidebar .available_wallet_list button {
   font-size: inherit;
   color: #536dfe;
