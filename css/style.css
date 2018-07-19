@@ -149,9 +149,10 @@ button[type='button'],
 a.button,
 input[type='submit'] {
   cursor: pointer;
-  border-width: 0;
+  border-width: 1px;
   border-style: solid;
   border-color: transparent;
+  box-sizing: border-box;
   font-family: inherit;
   background: transparent;
   appearance: none;
@@ -212,6 +213,12 @@ a.button.bg_icon:after {
   background-position: center left;
 }
 
+button[type='button'].bg_icon.add:before,
+a.button.bg_icon.add:before {
+  content: '+';
+  margin-right: 0.4em;
+}
+
 button[type='button'].icon,
 a.button.icon {
   text-indent: -999em;
@@ -224,6 +231,10 @@ button[type='button'].bugger.button,
 a.button.bugger.button,
 input[type='submit'].bugger.button {
   background: #600;
+}
+
+.btn_area.center {
+  text-align: center;
 }
 
 html, body, main, div#elm-target {
@@ -257,32 +268,32 @@ html, body, main, div#elm-target {
   position: relative;
 }
 
-.container .wrapper {
+.container > .wrapper {
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.container .wrapper:before, .container .wrapper:after {
+.container > .wrapper:before, .container > .wrapper:after {
   content: '';
   display: block;
   flex: 1;
 }
 
-.container .wrapper .tick_display {
+.container > .wrapper .tick_display {
   flex: 0 0 52px;
 }
 
-.container .wrapper:before {
+.container > .wrapper:before {
   order: 2;
 }
 
-.container .wrapper .action.view.panel {
+.container > .wrapper .action.view.panel {
   order: 3;
 }
 
-.container .wrapper:after {
+.container > .wrapper:after {
   order: 4;
 }
 
@@ -292,6 +303,74 @@ p.help.info a {
   padding-left: 20px;
   font-size: 0.875rem;
   color: #737a8d;
+}
+
+.dropdown_list {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown_list div.wrapper {
+  position: absolute;
+  top: 100%;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.dropdown_list div.wrapper button {
+  width: 100%;
+  border-top: 0;
+}
+
+.dropdown_list button {
+  font-size: 0.875rem;
+  background-color: #fff;
+  height: 40px;
+  line-height: 38px;
+  display: block;
+  white-space: nowrap;
+  padding: 0 16px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  border-radius: 0;
+  color: #999;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.dropdown_list button:hover {
+  color: black;
+  background: #f4f4f4;
+}
+
+.dropdown_list button[role="listitem"] {
+  border-color: #d8d8d8;
+}
+
+.dropdown_list button[role="listitem"][aria-level] {
+  background: url("../image/icon-dropdown.svg") calc(100% - 16px) calc(50%) no-repeat;
+  background-size: 20px 20px;
+  padding-right: 64px;
+  border-color: #737a8d;
+  border-radius: 2px;
+  color: #737a8d;
+}
+
+.dropdown_list div.wrapper {
+  transition: all 0.3s;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.dropdown_list.expand button[aria-level] {
+  background-position-y: calc(50% + 1px);
+}
+
+.dropdown_list.expand div.wrapper {
+  transition: all 0.3s;
+  max-height: 150px;
 }
 
 .sidebar {
@@ -1009,8 +1088,11 @@ button.lang {
   margin: 0;
 }
 
+.action.view.panel.search_result .transaction_history .dropdown_list.area {
+  margin: 47px 0 25px;
+}
+
 .action.view.panel.search_result .transaction_history table {
-  margin: 32px 0 0 0;
   border-bottom: 1px solid #e4e4e4;
 }
 
@@ -1021,11 +1103,24 @@ button.lang {
 }
 
 .action.view.panel.search_result .transaction_history th {
-  color: #000;
+  font-weight: normal;
+  color: #333;
 }
 
 .action.view.panel.search_result .transaction_history td {
-  color: #666;
+  color: #999;
+}
+
+.action.view.panel.search_result .btn_area {
+  margin-top: 40px;
+}
+
+.action.view.panel.search_result button.load.button {
+  height: 52px;
+  line-height: 50px;
+  font-size: 0.875rem;
+  min-width: 160px;
+  padding: 0 20px;
 }
 
 .action.view.panel.transfer {
