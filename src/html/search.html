@@ -160,6 +160,18 @@
             </div>
         </div>
 
+        <!-- demo script -->
+        <script>
+        (function () {
+            var target = document.querySelector('div.dropdown_list'),
+                handler = document.querySelector('div.dropdown_list.area > button[aria-level]');
+
+            handler.addEventListener('click',function () {
+                target.classList.toggle('expand');
+            });
+        })();
+        </script>
+
         <table>
             <thead>
                 <tr>
@@ -206,6 +218,10 @@
                 </tr>
             </tbody>
         </table>
+
+        <div class="btn_area center">
+            <button type="button" class="bg_icon add blue_white load button">더 보기</button>
+        </div>
     </div>
 
 </section>
