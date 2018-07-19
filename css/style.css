@@ -1333,7 +1333,7 @@ button.lang {
   min-width: 0;
   max-width: none;
   display: block;
-  width: 420px;
+  width: 440px;
   padding: 0;
   background-color: #fff;
   margin-top: 25vh;
@@ -1365,7 +1365,6 @@ button.lang {
   font-size: 0.8125rem;
   color: #999;
   position: relative;
-  color: #333;
 }
 
 .container.join ol.progress.bar li:nth-of-type(2) {
@@ -1390,6 +1389,10 @@ button.lang {
   z-index: 4;
 }
 
+.container.join ol.progress.bar li.ing {
+  color: #333;
+}
+
 .container.join ol.progress.bar li.ing:before {
   background-color: #8194ff;
   border-color: #536dfe;
@@ -1405,7 +1408,6 @@ button.lang {
   font-size: 1.5rem;
   font-weight: 300;
   color: #333;
-  white-space: nowrap;
   margin: 0 -200px;
   line-height: 1.5;
 }
@@ -1424,6 +1426,7 @@ button.lang {
   font-size: 0.875rem;
   text-align: center;
   color: #999;
+  line-height: 1.5;
 }
 
 .container.join article form {
@@ -1432,7 +1435,6 @@ button.lang {
   position: relative;
   color: #333;
   padding-bottom: 10px;
-  display: flex;
 }
 
 .container.join article form input {
@@ -1445,20 +1447,62 @@ button.lang {
   outline: 0;
   padding-bottom: 14px;
   border-bottom: 1px solid #536dfe;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .container.join article form input::placeholder {
   color: #999;
 }
 
-.container.join article form input[type='email'] {
-  background: url("../image/icon-mail.svg") left top no-repeat;
+.container.join article form input + span {
+  height: 20px;
+  line-height: 20px;
+  margin-top: 12px;
+  display: block;
+  font-size: 0.8125rem;
+  display: flex;
 }
 
-.container.join article form input[type='email'] + button {
-  font-size: 0.8125rem;
-  position: absolute;
-  right: 0;
+.container.join article form input[valid] {
+  border-color: #79c720;
+}
+
+.container.join article form input[valid] + span {
+  color: #79c720;
+  background: url("../image/icon-check-circle.svg") left center no-repeat;
+  background-size: 20px;
+  padding-left: 28px;
+}
+
+.container.join article form input[invalid] {
+  border-color: #ff6b64;
+}
+
+.container.join article form input[invalid] + span {
+  color: #ff6b64;
+}
+
+.container.join article form input[invalid] + span:before {
+  color: #ff6b64;
+  content: '+';
+  width: 20px;
+  height: 20px;
+  background-color: #ff6b64;
+  margin-right: 8px;
+  color: #fff;
+  text-align: center;
+  border-radius: 100%;
+  transform: rotate(45deg);
+}
+
+.container.join article form button {
+  color: inherit;
+  font-size: inherit;
+}
+
+.container.join article form input[type='email'] {
+  background: url("../image/icon-mail.svg") left top no-repeat;
 }
 
 .container.join article form input[type='text'] {
@@ -1468,33 +1512,12 @@ button.lang {
   background-size: 20px 20px;
 }
 
-.container.join article form input[type='text'] + span {
-  font-size: 0.8125rem;
-  position: absolute;
-  right: 0;
-}
-
 .container.join article form input[type='text'][valid] {
   background-image: url("../image/icon-id-default.svg#valid");
-  border-color: #79c720;
-}
-
-.container.join article form input[type='text'][valid] + span {
-  color: #79c720;
 }
 
 .container.join article form input[type='text'][invalid] {
   background-image: url("../image/icon-id-default.svg#invalid");
-  border-color: #ff6b64;
-}
-
-.container.join article form input[type='text'][invalid] + span {
-  color: #ff6b64;
-}
-
-.container.join article form button {
-  color: inherit;
-  font-size: inherit;
 }
 
 .container.join article h2 {
@@ -1504,7 +1527,7 @@ button.lang {
 }
 
 .container.join .exist_account {
-  margin-top: 32px;
+  margin-top: 16px;
   color: #999;
   font-size: 0.875rem;
   text-align: center;
@@ -1517,8 +1540,9 @@ button.lang {
 }
 
 .container.join article dl {
+  margin: 40px 0 0;
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 20% auto;
 }
 
 .container.join article dl dt, .container.join article dl dd {
@@ -1539,11 +1563,11 @@ button.lang {
   text-overflow: ellipsis;
 }
 
-.container.join .btn_area .button {
-  margin-top: 24px;
+.container.join article[data-step="3"] button.copy {
+  margin-top: 16px;
 }
 
-.container.join .hidden_copy_field {
+.container.join article[data-step="3"] .hidden_copy_field {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -1556,7 +1580,7 @@ button.lang {
   word-wrap: normal !important;
 }
 
-.container.join .hidden_copy_field:focus {
+.container.join article[data-step="3"] .hidden_copy_field:focus {
   background-color: #eee;
   clip: auto !important;
   clip-path: none;
@@ -1573,7 +1597,7 @@ button.lang {
   z-index: 100000;
 }
 
-.container.join .hidden_copy_field:focus, .container.join .hidden_copy_field::selection {
+.container.join article[data-step="3"] .hidden_copy_field:focus, .container.join article[data-step="3"] .hidden_copy_field::selection {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -1586,7 +1610,7 @@ button.lang {
   word-wrap: normal !important;
 }
 
-.container.join .hidden_copy_field:focus:focus, .container.join .hidden_copy_field::selection:focus {
+.container.join article[data-step="3"] .hidden_copy_field:focus:focus, .container.join article[data-step="3"] .hidden_copy_field::selection:focus {
   background-color: #eee;
   clip: auto !important;
   clip-path: none;
@@ -1610,7 +1634,6 @@ button.lang {
   width: 100%;
   font-size: 0.875rem;
   line-height: 52px;
-  margin-top: 16px;
 }
 
 .container.join button.middle[disabled],
@@ -1623,6 +1646,14 @@ button.lang {
 img.finished.icon {
   display: block;
   margin: 65px auto;
+}
+
+article + .btn_area {
+  margin-top: 24px;
+}
+
+article[data-step="3"] + .btn_area {
+  margin-top: 64px;
 }
 
 /*# sourceMappingURL=style.css.map */

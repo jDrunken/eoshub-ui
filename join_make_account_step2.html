@@ -40,7 +40,7 @@
     <li>계정생성</li>
 </ol>
 
-<article>
+<article data-step="2">
     <h1>
         <img src="./image/symbol-complete.svg" alt="">
         이메일 인증완료!
@@ -50,8 +50,16 @@
     <h2>example@email.com</h2>
 </article>
 <div class="btn_area">
-    <button type="button" class="middle white_blue button">다음</button>
+    <button type="button" class="middle white_blue next button">다음</button>
 </div>
+
+
+
+<script>
+document.querySelector('button').addEventListener('click',function () {
+    location.href = location.href.replace('2','3');
+});
+</script>
 
         </div>
     </div>
