@@ -1440,6 +1440,10 @@ button.lang {
   content: url("../image/symbol-alert.svg");
 }
 
+.container.join article[data-step="5"] h1:before {
+  display: none;
+}
+
 .container.join article[data-step="5"]:after {
   content: url("../image/group-18.svg");
   width: 350px;
