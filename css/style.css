@@ -393,7 +393,6 @@ p.help.info a {
 }
 
 .graph span {
-  border-radius: inherit;
   height: 8px;
   border-radius: 8px;
   display: block;
