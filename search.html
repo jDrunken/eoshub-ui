@@ -190,35 +190,37 @@
     <h3>리소스</h3>
     <div class="resource">
         <div class="cpu">
-            <h4>
-                CPU
-                <strong>778970655 ms Total</strong>
-            </h4>
+            <h4> CPU <strong>2sec/3sec</strong> </h4>
             <div class="graph">
-                <span style="width:72%" title="CPU :72%" data-status="high"></span>
+                0.12 eos
+                <span style="width:72%" class="loading" title="CPU:72%" data-status="fine"></span>
             </div>
             <p>사용 가능한 용량이 72% 남았어요</p>
         </div>
         <div class="net">
-            <h4>
-                NET
-                <strong>141 MB Total</strong>
-            </h4>
+            <h4> NET <strong>2kb/3kb</strong> </h4>
             <div class="graph">
-                <span style="width:50%" title="NET : 50%" data-status="middle"></span>
+                0.12 eos
+                <span style="width:50%" class="loading" title="NET:50%" data-status="good"></span>
             </div>
             <p>사용 가능한 용량이 32% 남았어요</p>
         </div>
         <div class="ram">
-            <h4>
-                RAM
-                <strong>148290056 Bytes Total</strong>
-            </h4>
+            <h4> RAM <strong>2kb/3kb</strong> </h4>
             <div class="graph">
-                <span style="width:12%" title="RAM : 12%" data-status="low"></span>
+                0.12 eos
+                <span style="width:12%" class="loading" title="RAM:12%" data-status="hell"></span>
             </div>
             <p>사용 가능한 용량이 12% 남았어요</p>
         </div>
+        <script>
+        window.addEventListener('load',function () {
+            var target = document.querySelectorAll('.wrapper div.graph > span');
+            for (var i=0; i<target.length; i++) {
+                target[i].setAttribute('class','');
+            }
+        });
+        </script>
     </div>
 
     <div class="transaction_history">
