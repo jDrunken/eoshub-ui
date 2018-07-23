@@ -428,8 +428,8 @@ p.help.info a {
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 4;
-  transition: background 0.5s;
+  top: 0;
+  z-index: -1;
 }
 
 .notificaiton.under_construction.hidden {
@@ -437,17 +437,17 @@ p.help.info a {
 }
 
 .notificaiton.under_construction.viewing {
-  top: 0;
+  z-index: 4;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  width: initial;
 }
 
 .notificaiton.under_construction .panel {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -300%);
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
   width: 572px;
   height: 320px;
   border-radius: 4px;
@@ -460,7 +460,7 @@ p.help.info a {
   box-sizing: border-box;
   color: #fff;
   padding: 48px;
-  transition: transform 0.5s;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-in;
 }
 
 .notificaiton.under_construction .panel h2 {
@@ -476,7 +476,8 @@ p.help.info a {
 }
 
 .notificaiton.under_construction.viewing .panel {
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
 .notificaiton.under_construction button.close.button {

@@ -38,7 +38,7 @@
         <div class="container">
             <div class="sidebar">
                 <header>
-                    <h1>eoshub</h1>
+                    <h1><a href="/">eoshub</a></h1>
                     <button type="button" id="lnbToggleButton" class="folding button" aria-hidden="true">사이드바 영역 닫기/열기</button>
 
                     
@@ -149,6 +149,39 @@
         </div>
     </a>
 </section>
+
+
+
+<div id="underConstruction" class="notificaiton under_construction">
+    <div class="panel">
+        <h2>여기는 아직 <br />
+            공사중이에요!</h2>
+        <p>추후 업데이트될 예정이오니 <br />
+            조금만 기다려주세요.</p>
+        <button type="button" class="icon close notification button">닫기</button>
+    </div>
+</div>
+
+
+<script>
+(function () {
+    var button = document.querySelectorAll('section.action.view.panel a:nth-of-type(n+2)');
+    var closeButton = document.querySelector('button.close.notification.button');
+    var target = document.getElementById('underConstruction');
+
+    for(var i=0; i < button.length; i++) {
+        button[i].addEventListener('click',function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            target.classList.add('viewing');
+        });
+    }
+
+    closeButton.addEventListener('click',function () {
+        target.classList.remove('viewing');
+    });
+})();
+</script>
 
             </div>
         </div>
