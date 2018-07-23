@@ -1044,6 +1044,7 @@ button.lang {
   background-image: url("../image/bg-dapp.svg");
 }
 
+.action.view.panel.public_key,
 .action.view.panel.search_result {
   background: #fff;
   margin: 48px 0 0 0;
@@ -1053,6 +1054,7 @@ button.lang {
   position: relative;
 }
 
+.action.view.panel.public_key h3,
 .action.view.panel.search_result h3 {
   font-size: 1.5rem;
   font-weight: 300;
@@ -1060,6 +1062,7 @@ button.lang {
   margin-top: 64px;
 }
 
+.action.view.panel.public_key .account.summary,
 .action.view.panel.search_result .account.summary {
   display: flex;
   justify-content: space-between;
@@ -1068,6 +1071,7 @@ button.lang {
   position: relative;
 }
 
+.action.view.panel.public_key .account.summary:before,
 .action.view.panel.search_result .account.summary:before {
   content: '';
   display: block;
@@ -1079,6 +1083,7 @@ button.lang {
   background-color: #e8e8e8;
 }
 
+.action.view.panel.public_key .account.summary ul,
 .action.view.panel.search_result .account.summary ul {
   padding: 0;
   margin: 0;
@@ -1087,17 +1092,23 @@ button.lang {
   align-items: center;
 }
 
+.action.view.panel.public_key .account.summary ul.summary,
+.action.view.panel.public_key .account.summary ul.details,
 .action.view.panel.search_result .account.summary ul.summary,
 .action.view.panel.search_result .account.summary ul.details {
   height: 48px;
 }
 
+.action.view.panel.public_key .account.summary ul.summary li,
+.action.view.panel.public_key .account.summary ul.details li,
 .action.view.panel.search_result .account.summary ul.summary li,
 .action.view.panel.search_result .account.summary ul.details li {
   font-size: 0.875rem;
   color: #999;
 }
 
+.action.view.panel.public_key .account.summary ul.summary li strong,
+.action.view.panel.public_key .account.summary ul.details li strong,
 .action.view.panel.search_result .account.summary ul.summary li strong,
 .action.view.panel.search_result .account.summary ul.details li strong {
   margin-top: 4px;
@@ -1105,15 +1116,18 @@ button.lang {
   display: block;
 }
 
+.action.view.panel.public_key .account.summary ul.summary li,
 .action.view.panel.search_result .account.summary ul.summary li {
   margin-left: 64px;
 }
 
+.action.view.panel.public_key .account.summary ul.summary li:first-child,
 .action.view.panel.search_result .account.summary ul.summary li:first-child {
   margin-left: 0;
   border-left-width: 0;
 }
 
+.action.view.panel.public_key .account.summary ul.summary li:first-child strong,
 .action.view.panel.search_result .account.summary ul.summary li:first-child strong {
   max-width: 11em;
   overflow: hidden;
@@ -1121,34 +1135,41 @@ button.lang {
   white-space: nowrap;
 }
 
+.action.view.panel.public_key .account.summary ul.summary li strong,
 .action.view.panel.search_result .account.summary ul.summary li strong {
   font-size: 1.5rem;
 }
 
+.action.view.panel.public_key .account.summary ul.details li,
 .action.view.panel.search_result .account.summary ul.details li {
   border-left: 1px solid #d8d8d8;
   padding: 0 2em;
   text-align: center;
 }
 
+.action.view.panel.public_key .account.summary ul.details li strong,
 .action.view.panel.search_result .account.summary ul.details li strong {
   font-size: 1.125rem;
 }
 
+.action.view.panel.public_key .account.summary ul.details li:first-child,
 .action.view.panel.search_result .account.summary ul.details li:first-child {
   padding-left: 0;
   border-left-width: 0;
 }
 
+.action.view.panel.public_key .account.summary ul.details li:last-child,
 .action.view.panel.search_result .account.summary ul.details li:last-child {
   padding-right: 0;
 }
 
+.action.view.panel.public_key .resource,
 .action.view.panel.search_result .resource {
   padding-top: 32px;
   display: flex;
 }
 
+.action.view.panel.public_key .resource > div,
 .action.view.panel.search_result .resource > div {
   padding: 32px;
   display: flex;
@@ -1160,10 +1181,12 @@ button.lang {
   height: 196px;
 }
 
+.action.view.panel.public_key .resource > div:first-child,
 .action.view.panel.search_result .resource > div:first-child {
   margin-left: 0;
 }
 
+.action.view.panel.public_key .resource h4,
 .action.view.panel.search_result .resource h4 {
   color: #333;
   font-weight: 700;
@@ -1173,6 +1196,7 @@ button.lang {
   font-size: 0.875rem;
 }
 
+.action.view.panel.public_key .resource h4 strong,
 .action.view.panel.search_result .resource h4 strong {
   flex: 1;
   text-align: right;
@@ -1180,48 +1204,96 @@ button.lang {
   font-weight: 400;
 }
 
+.action.view.panel.public_key .resource p,
 .action.view.panel.search_result .resource p {
   font-size: 0.875rem;
   color: #999;
 }
 
+.action.view.panel.public_key .resource p,
 .action.view.panel.search_result .resource p {
   margin: 0;
 }
 
+.action.view.panel.public_key .transaction_history .dropdown_list.area,
 .action.view.panel.search_result .transaction_history .dropdown_list.area {
   margin: 47px 0 25px;
 }
 
+.action.view.panel.public_key .transaction_history table,
 .action.view.panel.search_result .transaction_history table {
   border-bottom: 1px solid #e4e4e4;
 }
 
-.action.view.panel.search_result .transaction_history th, .action.view.panel.search_result .transaction_history td {
+.action.view.panel.public_key .transaction_history th, .action.view.panel.public_key .transaction_history td,
+.action.view.panel.search_result .transaction_history th,
+.action.view.panel.search_result .transaction_history td {
   border-top: 1px solid #e4e4e4;
   padding: 20px 16px;
   font-size: 0.875rem;
 }
 
+.action.view.panel.public_key .transaction_history th,
 .action.view.panel.search_result .transaction_history th {
   font-weight: normal;
   color: #333;
 }
 
+.action.view.panel.public_key .transaction_history td,
 .action.view.panel.search_result .transaction_history td {
   color: #999;
 }
 
+.action.view.panel.public_key .btn_area,
 .action.view.panel.search_result .btn_area {
   margin-top: 40px;
 }
 
+.action.view.panel.public_key button.load.button,
 .action.view.panel.search_result button.load.button {
   height: 52px;
   line-height: 50px;
   font-size: 0.875rem;
   min-width: 160px;
   padding: 0 20px;
+}
+
+.action.view.panel.public_key .account.summary ul.summary li:first-child strong {
+  max-width: none;
+}
+
+.action.view.panel.public_key .list {
+  margin: 32px -12px -12px -12px;
+  overflow: hidden;
+}
+
+.action.view.panel.public_key .list .card {
+  float: left;
+  margin: 12px;
+  max-width: 424px;
+  min-width: 352px;
+  height: 196px;
+  position: relative;
+  padding: 30px 33px;
+  box-sizing: border-box;
+  border: 1px solid #e8e8e8;
+}
+
+.action.view.panel.public_key .list .card h4 {
+  font-size: 2rem;
+  font-weight: 300px;
+  color: #666;
+  position: absolute;
+  bottom: 30px;
+  left: 33px;
+}
+
+.action.view.panel.public_key .list .card a {
+  position: absolute;
+  right: 33px;
+  top: 30px;
+  font-size: 0.875rem;
+  color: #536dfe;
 }
 
 .action.view.panel.transfer {
