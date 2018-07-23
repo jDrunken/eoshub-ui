@@ -8,7 +8,6 @@ $padding_bottom:36px;
     background-color:#fff;
     padding:$padding_top $padding_left_right $padding_bottom;
     box-sizing:border-box;
-    flex:0 0 400px;
 }
 
 .sidebar .dashboard.hello_world,
@@ -127,6 +126,8 @@ $padding_bottom:36px;
 
     h2 + .panel + .btn_area {
         margin-top:40px;
+        display:flex;
+        justify-content:space-between;
     }
 }
 
@@ -360,26 +361,8 @@ button.lang {
 // lnb dashboard graph
 .dashboard.logged .panel .graph {
     margin-top:44px;
-
-    $unit:8px;
-
-    border-radius:$unit;
-    height:$unit;
-    background-color:#f5f7f9;
-    position:relative;
-
-    span {
-        border-radius:inherit;
-        height:inherit;
-        background-color:#536dfe;
-        display:block;
-        left:0;
-        top:0;
-        right:0;
-        bottom:0;
-    }
-
 }
+
 .dashboard.logged .panel p.description  {
     text-align:center;
 }

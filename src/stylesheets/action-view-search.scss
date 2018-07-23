@@ -1,4 +1,5 @@
 @charset 'UTF-8';
+.action.view.panel.public_key,
 .action.view.panel.search_result {
     // var
     $padding:64px;
@@ -136,45 +137,21 @@
             display:flex;
             align-items:center;
             line-height:1.1;
+            font-size:rem(14);
 
             strong {
                 flex:1;
                 text-align:right;
-                color:#333;
+                color:#666;
                 font-weight:400;
             }
         }
 
-        .graph {
-            $unit:8px;
-
-            border-radius:$unit;
-            height:$unit;
-            background-color:#f5f7f9;
-            position:relative;
-
-            span {
-                border-radius:inherit;
-                height:inherit;
-                display:block;
-                left:0;
-                top:0;
-                right:0;
-                bottom:0;
-            }
-
-            span[data-status='high'] {
-                background-color:#536dfe;
-            }
-
-            span[data-status='middle'] {
-                background-color:#f5cb23;
-            }
-
-            span[data-status='low'] {
-                background-color:#ff6b64;
-            }
+        p {
+            font-size:rem(14);
+            color:#999;
         }
+
 
         p {
             margin:0;
@@ -219,4 +196,46 @@
         padding:0 20px;
     }
 
+}
+
+// extra case :: just one element yet
+.action.view.panel.public_key .account.summary ul.summary li:first-child strong {
+    max-width:none;
+}
+
+
+// public key
+.action.view.panel.public_key .list {
+    margin:32px -12px -12px -12px;
+    overflow:hidden;
+    .card {
+        float:left;
+        margin:12px;
+        max-width:424px;
+        min-width:352px;
+        height:196px;
+        position:relative;
+        padding:30px 33px;
+
+        box-sizing:border-box;
+
+        border:1px solid #e8e8e8;
+
+        h4 {
+            font-size:rem(32);
+            font-weight:300px;
+            color:#666;
+            position:absolute;
+            bottom:30px;
+            left:33px;
+        }
+
+        a {
+            position:absolute;
+            right:33px;
+            top:30px;
+            font-size:rem(14);
+            color:#536dfe;
+        }
+    }
 }
