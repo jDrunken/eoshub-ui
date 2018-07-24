@@ -337,7 +337,6 @@ p.help.info a {
   border-radius: 0;
   color: #999;
   transition: color 0.3s, background-color 0.3s;
-  outline: 0;
 }
 
 .dropdown_list button:hover {
@@ -1031,7 +1030,6 @@ button.lang {
   margin-top: 4px;
   color: #333;
   display: block;
-  font-weight: 400;
 }
 
 .action.view.panel.public_key .account.summary ul.summary li,
@@ -1162,20 +1160,6 @@ button.lang {
   color: #999;
 }
 
-.action.view.panel.public_key .transaction_history td.info,
-.action.view.panel.search_result .transaction_history td.info {
-  position: relative;
-  padding-right: 36px;
-}
-
-.action.view.panel.public_key .transaction_history td.info span.memo.popup,
-.action.view.panel.search_result .transaction_history td.info span.memo.popup {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .action.view.panel.public_key .btn_area,
 .action.view.panel.search_result .btn_area {
   margin-top: 40px;
@@ -1226,84 +1210,6 @@ button.lang {
   top: 30px;
   font-size: 0.875rem;
   color: #536dfe;
-}
-
-.action.view.panel .memo.popup {
-  display: inline-block;
-  position: relative;
-  font-size: 0.875rem;
-  width: 15px;
-  height: 15px;
-  margin-left: 0.6em;
-  z-index: 4;
-}
-
-.action.view.panel .memo.popup > span {
-  display: block;
-  position: absolute;
-  padding: 16px;
-  top: -17px;
-  right: -17px;
-  width: 200px;
-  box-sizing: border-box;
-  line-height: 1.5;
-  color: #999;
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
-}
-
-.action.view.panel .memo.popup.viewing > span {
-  box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
-  background-color: #ffffff;
-  border-color: #d8d8d8;
-}
-
-.action.view.panel {
-  overflow: initial;
-}
-
-.action.view.panel .memo.popup strong[role="title"] {
-  font-weight: normal;
-  display: none;
-  line-height: 20px;
-  background: url("../image/icon-clipboard.svg") left center no-repeat transparent;
-  background-size: 20px 20px;
-  margin-bottom: 16px;
-  color: #666;
-  padding-left: 24px;
-}
-
-.action.view.panel .memo.popup.viewing strong[role="title"] {
-  display: block;
-}
-
-.action.view.panel .memo.popup span.description {
-  display: none;
-}
-
-.action.view.panel .memo.popup.viewing span.description {
-  display: initial;
-}
-
-.action.view.panel .memo.popup button.view.button {
-  text-indent: -999em;
-  overflow: hidden;
-  width: 15px;
-  height: 15px;
-  background: url("../image/icon-close-black.svg") center center no-repeat transparent;
-  background-size: contain;
-  position: absolute;
-  top: 17px;
-  right: 16px;
-  transform-origin: center center;
-  outline: 0;
-  vertical-align: middle;
-  transition: transform .1s;
-}
-
-.action.view.panel .memo.popup.viewing button.view.button {
-  transform: rotate(45deg);
 }
 
 .action.view.panel.transfer {
