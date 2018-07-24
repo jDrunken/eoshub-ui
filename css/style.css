@@ -337,6 +337,7 @@ p.help.info a {
   border-radius: 0;
   color: #999;
   transition: color 0.3s, background-color 0.3s;
+  outline: 0;
 }
 
 .dropdown_list button:hover {
@@ -1030,6 +1031,7 @@ button.lang {
   margin-top: 4px;
   color: #333;
   display: block;
+  font-weight: 400;
 }
 
 .action.view.panel.public_key .account.summary ul.summary li,
