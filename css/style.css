@@ -475,6 +475,7 @@ p.help.info a {
 }
 
 .notificaiton.under_construction.viewing .panel {
+  background-image: url("../image/bg_under_construction.svg#tougue");
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
