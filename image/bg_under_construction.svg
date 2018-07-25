@@ -66,15 +66,15 @@
                 transform:translate(0%,0%) rotate(0deg)
             }
 
-            50% {
+            30% {
                 transform:translate(0%,0%) rotate(0deg)
             }
 
-            52% {
+            32% {
                 transform:translate(0%,0.7%) rotate(0deg)
             }
 
-            55% {
+            35% {
                 transform:translate(0%,0%) rotate(0deg)
             }
 
@@ -91,8 +91,8 @@
             display:initial;
             transform-origin: center center;
             transform:translate(0%,0%) rotate(0deg);
-            animation: tougue 3s linear;
-            animation-delay:2s;
+            animation: tougue 2.5s linear;
+            animation-delay:0.5s;
 
             /* transform: translate(-30%,7%) rotate(-58deg);   //start */
         }
